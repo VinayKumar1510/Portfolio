@@ -224,42 +224,42 @@ export default function Home() {
       </nav>
 
             {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-purple-900/20 to-cyan-900/20"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4">
-          <div className={`grid lg:grid-cols-2 gap-12 items-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 py-8">
+          <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             {/* Text Content - Left Side */}
-            <div className="text-center lg:text-left">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <div className="text-center lg:text-left order-2 lg:order-1">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6">
                 <span className="gradient-text">Hello, I&apos;m Vinay</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-4 animate-fade-in-up">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-3 sm:mb-4 animate-fade-in-up">
                 Full Stack Web Developer & Cybersecurity Enthusiast
               </p>
-              <p className="text-lg text-gray-400 mb-6 max-w-2xl lg:max-w-none animate-fade-in-up">
+              <p className="text-base sm:text-lg text-gray-400 mb-4 sm:mb-6 max-w-2xl lg:max-w-none animate-fade-in-up">
                 I create innovative web solutions and explore cybersecurity. Specializing in scalable applications that solve real-world problems.
               </p>
               
               {/* Additional Info Section */}
-              <div className="mb-8 space-y-4 animate-fade-in-up">
-                <div className="flex flex-wrap gap-3">
-                  <span className="px-3 py-1 bg-indigo-600/20 text-indigo-400 rounded-full text-sm font-medium border border-indigo-500/30">
+              <div className="mb-6 space-y-4 animate-fade-in-up">
+                <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+                  <span className="px-2 py-1 bg-indigo-600/20 text-indigo-400 rounded-full text-xs font-medium border border-indigo-500/30">
                     Full Stack Developer
                   </span>
-                  <span className="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium border border-purple-500/30">
+                  <span className="px-2 py-1 bg-purple-600/20 text-purple-400 rounded-full text-xs font-medium border border-purple-500/30">
                     Cybersecurity Enthusiast
                   </span>
-                  <span className="px-3 py-1 bg-cyan-600/20 text-cyan-400 rounded-full text-sm font-medium border border-cyan-500/30">
+                  <span className="px-2 py-1 bg-cyan-600/20 text-cyan-400 rounded-full text-xs font-medium border border-cyan-500/30">
                     Freelancer
                   </span>
                 </div>
                 
-                <div className="text-gray-300 text-base leading-relaxed">
-                  <p className="mb-3">
+                <div className="text-gray-300 text-sm sm:text-base leading-relaxed text-center lg:text-left">
+                  <p className="mb-2 sm:mb-3">
                     Expert in <span className="text-indigo-400 font-semibold">React</span>, <span className="text-indigo-400 font-semibold">Next.js</span>, 
                     <span className="text-indigo-400 font-semibold"> Node.js</span>, and <span className="text-indigo-400 font-semibold">Express.js</span>.
                   </p>
-                  <p className="mb-3">
+                  <p className="mb-2 sm:mb-3">
                     Passionate about <span className="text-purple-400 font-semibold">cybersecurity</span> and ethical hacking.
                   </p>
                   <p>
@@ -268,43 +268,46 @@ export default function Home() {
                 </div>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up">
-                <button
-                  onClick={() => scrollToSection("projects")}
-                  className="px-8 py-3 btn-primary text-white rounded-full font-semibold hover-lift animate-glow"
-                >
-                  View My Work
-                </button>
-                <button
-                  onClick={() => scrollToSection("contact")}
-                  className="px-8 py-3 border border-indigo-400 text-indigo-400 rounded-full font-semibold hover:bg-indigo-400 hover:text-white transition-all duration-300 glass-effect"
-                >
-                  Get In Touch
-                </button>
+              <div className="flex flex-col gap-4 justify-center lg:justify-start animate-fade-in-up">
+                {/* Primary Action Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <button
+                    onClick={() => scrollToSection("projects")}
+                    className="px-6 py-3 btn-primary text-white rounded-full font-semibold hover-lift animate-glow text-sm sm:text-base"
+                  >
+                    View My Work
+                  </button>
+                  <button
+                    onClick={() => scrollToSection("contact")}
+                    className="px-6 py-3 border border-indigo-400 text-indigo-400 rounded-full font-semibold hover:bg-indigo-400 hover:text-white transition-all duration-300 glass-effect text-sm sm:text-base"
+                  >
+                    Get In Touch
+                  </button>
+                </div>
                 
-                {/* Resume Dropdown */}
-                <div className="relative resume-dropdown">
+                {/* Resume Dropdown - Full Width on Mobile */}
+                <div className="relative resume-dropdown w-full sm:w-auto">
                   <button
                     onClick={() => setIsResumeDropdownOpen(!isResumeDropdownOpen)}
-                    className="px-8 py-3 border border-purple-400 text-purple-400 rounded-full font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 glass-effect flex items-center gap-2"
+                    className="w-full sm:w-auto px-6 py-3 border border-purple-400 text-purple-400 rounded-full font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 glass-effect flex items-center justify-center gap-2 text-sm sm:text-base"
                   >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                     Resume
-                    <svg className={`w-4 h-4 transition-transform duration-300 ${isResumeDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className={`w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-300 ${isResumeDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
                   
                   {/* Dropdown Menu */}
                   {isResumeDropdownOpen && (
-                    <div className="absolute top-full mt-2 left-0 w-48 glass-effect rounded-lg shadow-xl border border-purple-500/30 overflow-hidden z-50">
+                    <div className="absolute top-full mt-2 left-0 right-0 sm:right-auto sm:w-48 glass-effect rounded-lg shadow-xl border border-purple-500/30 overflow-hidden z-50">
                       <button
                         onClick={() => handleResumeAction('view')}
-                        className="w-full px-4 py-3 text-left text-gray-300 hover:text-purple-400 hover:bg-purple-400/10 transition-all duration-300 flex items-center gap-3"
+                        className="w-full px-4 py-3 text-left text-gray-300 hover:text-purple-400 hover:bg-purple-400/10 transition-all duration-300 flex items-center gap-3 text-sm"
                       >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                         </svg>
@@ -312,9 +315,9 @@ export default function Home() {
                       </button>
                       <button
                         onClick={() => handleResumeAction('download')}
-                        className="w-full px-4 py-3 text-left text-gray-300 hover:text-purple-400 hover:bg-purple-400/10 transition-all duration-300 flex items-center gap-3 border-t border-purple-500/30"
+                        className="w-full px-4 py-3 text-left text-gray-300 hover:text-purple-400 hover:bg-purple-400/10 transition-all duration-300 flex items-center gap-3 border-t border-purple-500/30 text-sm"
                       >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                         </svg>
                         Download Resume
@@ -326,9 +329,9 @@ export default function Home() {
             </div>
             
             {/* Photo - Right Side */}
-            <div className="flex justify-center lg:justify-end animate-fade-in-right">
+            <div className="flex justify-center lg:justify-end animate-fade-in-right order-1 lg:order-2 mb-8 lg:mb-0">
               <div className="relative">
-                <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden glass-effect p-2 hover-lift">
+                <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden glass-effect p-2 hover-lift">
                   <div className="w-full h-full rounded-full overflow-hidden">
                     <Image
                       src="/vinay-photo.jpg"
