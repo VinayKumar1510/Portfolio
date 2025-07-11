@@ -7,7 +7,6 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [animatedSkills, setAnimatedSkills] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isResumeDropdownOpen, setIsResumeDropdownOpen] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -31,16 +30,7 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (isResumeDropdownOpen && !event.target.closest('.resume-dropdown')) {
-        setIsResumeDropdownOpen(false);
-      }
-    };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [isResumeDropdownOpen]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -71,19 +61,13 @@ export default function Home() {
   };
 
   const handleResumeAction = (action) => {
-    if (action === 'view') {
-      // Open resume in new tab - replace with your actual resume URL
-      window.open('/resume.pdf', '_blank');
-    } else if (action === 'download') {
-      // Download resume - replace with your actual resume URL
-      const link = document.createElement('a');
-      link.href = '/resume.pdf';
-      link.download = 'Vinay_Kumar_Resume.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-    setIsResumeDropdownOpen(false);
+    // Download resume - replace with your actual resume URL
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Vinay_Kumar_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const skills = [
@@ -285,45 +269,17 @@ export default function Home() {
                   </button>
                 </div>
                 
-                {/* Resume Dropdown - Full Width on Mobile */}
-                <div className="relative resume-dropdown w-full sm:w-auto">
+                {/* Resume Download Button */}
+                <div className="flex flex-col sm:flex-row gap-3">
                   <button
-                    onClick={() => setIsResumeDropdownOpen(!isResumeDropdownOpen)}
-                    className="w-full sm:w-auto px-6 py-3 border border-purple-400 text-purple-400 rounded-full font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 glass-effect flex items-center justify-center gap-2 text-sm sm:text-base"
+                    onClick={() => handleResumeAction('download')}
+                    className="px-6 py-3 border border-purple-400 text-purple-400 rounded-full font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 glass-effect flex items-center justify-center gap-2 text-sm sm:text-base"
                   >
                     <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
-                    Resume
-                    <svg className={`w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-300 ${isResumeDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
+                    Download Resume
                   </button>
-                  
-                  {/* Dropdown Menu */}
-                  {isResumeDropdownOpen && (
-                    <div className="absolute top-full mt-2 left-0 right-0 sm:right-auto sm:w-48 glass-effect rounded-lg shadow-xl border border-purple-500/30 overflow-hidden z-50">
-                      <button
-                        onClick={() => handleResumeAction('view')}
-                        className="w-full px-4 py-3 text-left text-gray-300 hover:text-purple-400 hover:bg-purple-400/10 transition-all duration-300 flex items-center gap-3 text-sm"
-                      >
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                        </svg>
-                        View Resume
-                      </button>
-                      <button
-                        onClick={() => handleResumeAction('download')}
-                        className="w-full px-4 py-3 text-left text-gray-300 hover:text-purple-400 hover:bg-purple-400/10 transition-all duration-300 flex items-center gap-3 border-t border-purple-500/30 text-sm"
-                      >
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
-                        Download Resume
-                      </button>
-                    </div>
-                  )}
                 </div>
               </div>
             </div>
