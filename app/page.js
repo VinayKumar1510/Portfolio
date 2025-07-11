@@ -231,7 +231,7 @@ export default function Home() {
             {/* Text Content - Left Side */}
             <div className="text-center lg:text-left">
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                <span className="gradient-text">Hello, I'm Vinay</span>
+                <span className="gradient-text">Hello, I&apos;m Vinay</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-4 animate-fade-in-up">
                 Full Stack Web Developer & Cybersecurity Enthusiast
@@ -369,12 +369,12 @@ export default function Home() {
               <div className="glass-effect rounded-2xl p-8 hover-lift">
                 <h3 className="text-2xl font-bold mb-4 text-indigo-400">Who I Am</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  I'm a passionate Full Stack Developer with a love for creating innovative web solutions.
+                  I&apos;m a passionate Full Stack Developer with a love for creating innovative web solutions.
                   With expertise in modern technologies like React, Next.js, and Node.js, I bring ideas to life
                   through clean, efficient, and scalable code.
                 </p>
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects,
+                  When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing to open-source projects,
                   or sharing knowledge with the developer community.
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -529,7 +529,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Get In Touch</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto"></div>
             <p className="text-xl text-gray-300 mt-6">
-              Let's work together to bring your ideas to life!
+              Let&apos;s work together to bring your ideas to life!
             </p>
           </div>
 
