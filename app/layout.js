@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Vinay's Portfolio | Full Stack Developer",
-  description: "Welcome to my portfolio! I'm a passionate Full Stack Developer creating amazing web experiences with modern technologies.",
+  title: "Vinay&apos;s Portfolio | Full Stack Developer",
+  description: "Welcome to my portfolio! I&apos;m a passionate Full Stack Developer creating amazing web experiences with modern technologies.",
   keywords: "portfolio, developer, full stack, web development, next.js, react",
   author: "Vinay",
   icons: {
