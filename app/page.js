@@ -82,61 +82,70 @@ export default function Home() {
   ];
 
   const projects = [
-    {
-      title: "Bitnotes",
-      description: "A note-taking application with real-time collaboration features",
-      tech: ["JavaScript", "React", "Node.js", "MongoDB"],
-      image: "/next.svg",
-      github: "https://github.com/VinayKumar1510/Bitnotes",
-      live: "https://bitnotes-iota.vercel.app/",
-      featured: true
-    },
-    {
-      title: "PDF-Merger",
-      description: "Web application to merge multiple PDF files into one",
-      tech: ["JavaScript", "React", "PDF.js", "File API"],
-      image: "/vercel.svg",
-      github: "https://github.com/VinayKumar1510/PDF-Merger",
-      live: "https://pdf-merger-mauve.vercel.app/",
-      featured: true
-    },
-    {
-      title: "No-Poverty",
-      description: "Social impact platform focused on poverty alleviation",
-      tech: ["JavaScript", "React", "Node.js", "MongoDB"],
-      image: "/globe.svg",
-      github: "https://github.com/VinayKumar1510/no-poverty",
-      live: "https://no-poverty-vma5.vercel.app/",
-      featured: true
-    },
-    {
-      title: "SwiftCSV",
-      description: "Fast CSV file viewer with search and pagination features",
-      tech: ["JavaScript", "React", "CSV Parser", "File API"],
-      image: "/file.svg",
-      github: "https://github.com/VinayKumar1510/SwiftCSV",
-      live: "https://swift-csv.vercel.app/",
-      featured: true
-    },
-    {
-      title: "Marklog",
-      description: "Blog platform with markdown support and user authentication",
-      tech: ["JavaScript", "React", "Node.js", "MongoDB"],
-      image: "/window.svg",
-      github: "https://github.com/VinayKumar1510/Marklog",
-      live: "https://marklog.vercel.app/",
-      featured: true
-    },
-    {
-      title: "StyleMorph",
-      description: "CSS animation library and style transformation tool",
-      tech: ["JavaScript", "CSS3", "Animation", "Web APIs"],
-      image: "/globe.svg",
-      github: "https://github.com/VinayKumar1510/StyleMorph",
-      live: "https://style-morph.vercel.app/",
-      featured: true
-    }
-  ];
+  {
+    title: "VendorVerse",
+    description: "Multi-vendor e-commerce platform with dynamic product listings.",
+    tech: ["Next.js", "MongoDB", "Tailwind CSS", "React"],
+    image: "/file.svg", 
+    github: "https://github.com/VinayKumar1510/VendoVerse", 
+    live: "https://vendo-verse.vercel.app/", 
+    featured: true,
+  },
+  {
+    title: "Bitnotes",
+    description: "A note-taking application with real-time collaboration features",
+    tech: ["JavaScript", "React", "Node.js", "MongoDB"],
+    image: "/next.svg",
+    github: "https://github.com/VinayKumar1510/Bitnotes",
+    live: "https://bitnotes-iota.vercel.app/",
+    featured: true,
+  },
+  {
+    title: "PDF-Merger",
+    description: "Web application to merge multiple PDF files into one",
+    tech: ["JavaScript", "React", "PDF.js", "File API"],
+    image: "/vercel.svg",
+    github: "https://github.com/VinayKumar1510/PDF-Merger",
+    live: "https://pdf-merger-mauve.vercel.app/",
+    featured: true,
+  },
+  {
+    title: "No-Poverty",
+    description: "Social impact platform focused on poverty alleviation",
+    tech: ["JavaScript", "React", "Node.js", "MongoDB"],
+    image: "/globe.svg",
+    github: "https://github.com/VinayKumar1510/no-poverty",
+    live: "https://no-poverty-vma5.vercel.app/",
+    featured: true,
+  },
+  {
+    title: "SwiftCSV",
+    description: "Fast CSV file viewer with search and pagination features",
+    tech: ["JavaScript", "React", "CSV Parser", "File API"],
+    image: "/file.svg",
+    github: "https://github.com/VinayKumar1510/SwiftCSV",
+    live: "https://swift-csv.vercel.app/",
+    featured: true,
+  },
+  {
+    title: "Marklog",
+    description: "Blog platform with markdown support and user authentication",
+    tech: ["JavaScript", "React", "Node.js", "MongoDB"],
+    image: "/window.svg",
+    github: "https://github.com/VinayKumar1510/Marklog",
+    live: "https://marklog.vercel.app/",
+    featured: true,
+  },
+  {
+    title: "StyleMorph",
+    description: "CSS animation library and style transformation tool",
+    tech: ["JavaScript", "CSS3", "Animation", "Web APIs"],
+    image: "/globe.svg",
+    github: "https://github.com/VinayKumar1510/StyleMorph",
+    live: "https://style-morph.vercel.app/",
+    featured: true,
+  },
+];
 
   return (
     <div className="min-h-screen">
