@@ -71,13 +71,13 @@ export default function Home() {
   };
 
   const skills = [
-    { name: "React.js", level: 70, color: "#61dafb", gradient: "linear-gradient(90deg, #61dafb, #00d4ff)" },
-    { name: "Next.js", level: 85, color: "#000000", gradient: "linear-gradient(90deg, #000000, #6366f1)" },
+    { name: "React.js", level: 85, color: "#61dafb", gradient: "linear-gradient(90deg, #61dafb, #00d4ff)" },
+    { name: "Next.js", level: 90, color: "#000000", gradient: "linear-gradient(90deg, #000000, #6366f1)" },
     { name: "TypeScript", level: 60, color: "#3178c6", gradient: "linear-gradient(90deg, #3178c6, #4f46e5)" },
-    { name: "JavaScript", level: 80, color: "#f7df1e", gradient: "linear-gradient(90deg, #f7df1e, #fbbf24)" },
-    { name: "Node.js", level: 75, color: "#339933", gradient: "linear-gradient(90deg, #339933, #10b981)" },
-    { name: "Tailwind CSS", level: 85, color: "#06b6d4", gradient: "linear-gradient(90deg, #06b6d4, #0891b2)" },
-    { name: "Express.js", level: 60, color: "#000000", gradient: "linear-gradient(90deg, #000000, #6366f1)" },
+    { name: "JavaScript", level: 85, color: "#f7df1e", gradient: "linear-gradient(90deg, #f7df1e, #fbbf24)" },
+    { name: "Node.js", level: 80, color: "#339933", gradient: "linear-gradient(90deg, #339933, #10b981)" },
+    { name: "Tailwind CSS", level: 90, color: "#06b6d4", gradient: "linear-gradient(90deg, #06b6d4, #0891b2)" },
+    { name: "Express.js", level: 70, color: "#000000", gradient: "linear-gradient(90deg, #000000, #6366f1)" },
     { name: "MongoDB", level: 80, color: "#47a248", gradient: "linear-gradient(90deg, #47a248, #22c55e)" },
   ];
 
