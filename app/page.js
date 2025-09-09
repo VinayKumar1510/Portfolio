@@ -110,15 +110,6 @@ export default function Home() {
     featured: true,
   },
   {
-    title: "No-Poverty",
-    description: "Social impact platform focused on poverty alleviation",
-    tech: ["JavaScript", "React", "Node.js", "MongoDB"],
-    image: "/globe.svg",
-    github: "https://github.com/VinayKumar1510/no-poverty",
-    live: "https://no-poverty-vma5.vercel.app/",
-    featured: true,
-  },
-  {
     title: "SwiftCSV",
     description: "Fast CSV file viewer with search and pagination features",
     tech: ["JavaScript", "React", "CSV Parser", "File API"],
