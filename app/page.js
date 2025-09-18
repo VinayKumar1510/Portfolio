@@ -64,7 +64,7 @@ export default function Home() {
     // Download resume - replace with your actual resume URL
     const link = document.createElement('a');
     link.href = '/resume.pdf';
-    link.download = 'Vinay_Kumar_Resume.pdf';
+    link.download = 'Vinay Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
