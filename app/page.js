@@ -63,7 +63,7 @@ export default function Home() {
   const handleResumeAction = (action) => {
     // Download resume - replace with your actual resume URL
     const link = document.createElement('a');
-    link.href = '/resume.pdf';
+    link.href = '/Vinay Resume.pdf';
     link.download = 'Vinay Resume.pdf';
     document.body.appendChild(link);
     link.click();
